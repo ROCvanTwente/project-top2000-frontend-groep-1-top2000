@@ -6,7 +6,8 @@
  */
 
 // Change this URL when deploying or changing backend location
-export const API_BASE_URL = 'https://top2000project.runasp.net';
+//export const API_BASE_URL = 'https://top2000project.runasp.net';        // voor live: https://top2000project.runasp.net
+ export const API_BASE_URL = 'https://localhost:7003/api';              // voor lokaal testen
 
 // You can also use environment variables (recommended for production):
 // export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://localhost:7003/api';
