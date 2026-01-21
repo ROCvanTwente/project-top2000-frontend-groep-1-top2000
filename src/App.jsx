@@ -1,7 +1,12 @@
 ﻿import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
 import SongDetail from './components/SongDetail'
-import Statistics from './components/Statistics'
+import StatisticsHome from './components/StatisticsHome'
+import DroppedSongs from './components/DroppedSongs'
+import Contact from './components/Contact'
+import Navbar from './components/Navbar'
 import API_BASE_URL from './config/api'
 import './App.css'
 
@@ -112,17 +117,7 @@ function HomePage() {
   if (loading && songs.length === 0) {
     return (
       <div className="app">
-        <header className="header">
-          <Link to="/" className="logo" style={{ textDecoration: 'none' }}>🎵 TOP 2000</Link>
-          <nav className="nav">
-            <Link to="/" className="nav-link active">Home</Link>
-            <a href="#list" className="nav-link">Lijst</a>
-            <Link to="/statistics" className="nav-link">Statistics</Link>
-            <a href="#stemmen" className="nav-link">Stemmen</a>
-            <a href="#info" className="nav-link">Info</a>
-            <a href="#account" className="nav-link">👤</a>
-          </nav>
-        </header>
+        <Navbar />
         <main className="main-content">
           <div className="loading">Loading Top 2000...</div>
         </main>
@@ -133,17 +128,7 @@ function HomePage() {
   if (error) {
     return (
       <div className="app">
-        <header className="header">
-          <Link to="/" className="logo" style={{ textDecoration: 'none' }}>🎵 TOP 2000</Link>
-          <nav className="nav">
-            <Link to="/" className="nav-link active">Home</Link>
-            <a href="#list" className="nav-link">Lijst</a>
-            <Link to="/statistics" className="nav-link">Statistics</Link>
-            <a href="#stemmen" className="nav-link">Stemmen</a>
-            <a href="#info" className="nav-link">Info</a>
-            <a href="#account" className="nav-link">👤</a>
-          </nav>
-        </header>
+        <Navbar />
         <main className="main-content">
           <div className="error">
             <p>{error}</p>
@@ -158,19 +143,55 @@ function HomePage() {
 
   return (
     <div className="app">
-      <header className="header">
-        <Link to="/" className="logo" style={{ textDecoration: 'none' }}>🎵 TOP 2000</Link>
-        <nav className="nav">
-          <Link to="/" className="nav-link active">Home</Link>
-          <a href="#list" className="nav-link">Lijst</a>
-          <Link to="/statistics" className="nav-link">Statistics</Link>
-          <a href="#stemmen" className="nav-link">Stemmen</a>
-          <a href="#info" className="nav-link">Info</a>
-          <a href="#account" className="nav-link">👤</a>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="main-content">
+        {/* Splide Slider */}
+        {currentPage === 1 && (
+          <section className="hero-slider">
+            <Splide
+              options={{
+                type: 'loop',
+                autoplay: true,
+                interval: 5000,
+                pauseOnHover: true,
+                resetProgress: false,
+                arrows: true,
+                pagination: true,
+                height: '500px',
+              }}
+            >
+              <SplideSlide>
+                <div className="slide-content slide-1">
+                  <div className="slide-overlay">
+                    <h2>TOP 2000 2024</h2>
+                    <p>Stem nu op jouw favoriete nummers!</p>
+                    <Link to="/statistics" className="slide-button">Bekijk Statistieken</Link>
+                  </div>
+                </div>
+              </SplideSlide>
+              <SplideSlide>
+                <div className="slide-content slide-2">
+                  <div className="slide-overlay">
+                    <h2>Ontdek de Grootste Dalingen</h2>
+                    <p>Zie welke nummers het meest gedaald zijn dit jaar</p>
+                    <Link to="/statistics/grootste-dalingen" className="slide-button">Meer Info</Link>
+                  </div>
+                </div>
+              </SplideSlide>
+              <SplideSlide>
+                <div className="slide-content slide-3">
+                  <div className="slide-overlay">
+                    <h2>2000 Nummers, Oneindig Veel Herinneringen</h2>
+                    <p>Deel jouw verhaal met ons</p>
+                    <Link to="/contact" className="slide-button">Contact</Link>
+                  </div>
+                </div>
+              </SplideSlide>
+            </Splide>
+          </section>
+        )}
+
         {currentPage === 1 && featuredSongs.length > 0 && (
           <section className="featured-section">
             <h2 className="section-title">TOP 2000 2024</h2>
@@ -296,13 +317,45 @@ function HomePage() {
   );
 }
 
+function FAQ() {
+  return (
+    <div className="app">
+      <Navbar />
+      <main className="main-content">
+        <div className="faq-container">
+          <h1 className="page-title">Veelgestelde Vragen</h1>
+          <p className="page-subtitle">Binnenkort beschikbaar...</p>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+function Account() {
+  return (
+    <div className="app">
+      <Navbar />
+      <main className="main-content">
+        <div className="account-container">
+          <h1 className="page-title">Account</h1>
+          <p className="page-subtitle">Binnenkort beschikbaar...</p>
+        </div>
+      </main>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/song/:slug" element={<SongDetail />} />
-        <Route path="/statistics" element={<Statistics />} />
+        <Route path="/statistics" element={<StatisticsHome />} />
+        <Route path="/statistics/grootste-dalingen" element={<DroppedSongs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </Router>
   );

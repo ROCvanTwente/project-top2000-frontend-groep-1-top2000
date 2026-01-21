@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import Navbar from './Navbar';
+﻿import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 import API_BASE_URL from '../config/api';
 import './Statistics.css';
 
-function Statistics() {
+function DroppedSongs() {
   const [droppedSongs, setDroppedSongs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -57,15 +57,9 @@ function Statistics() {
   if (loading) {
     return (
       <div className="statistics-container">
-        <header className="header">
-          <Link to="/" className="logo" style={{ textDecoration: 'none' }}>?? TOP 2000</Link>
-          <nav className="nav">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/statistics" className="nav-link active">Statistics</Link>
-          </nav>
-        </header>
+        <Navbar />
         <main className="main-content">
-          <div className="loading">Statistiek laden...</div>
+          <div className="loading">Statistieken laden...</div>
         </main>
       </div>
     );
@@ -74,13 +68,7 @@ function Statistics() {
   if (error) {
     return (
       <div className="statistics-container">
-        <header className="header">
-          <Link to="/" className="logo" style={{ textDecoration: 'none' }}>TOP 2000</Link>
-          <nav className="nav">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/statistics" className="nav-link active">Statistieken</Link>
-          </nav>
-        </header>
+        <Navbar />
         <main className="main-content">
           <div className="error">
             <p>{error}</p>
@@ -95,13 +83,7 @@ function Statistics() {
 
   return (
     <div className="statistics-container">
-      <header className="header">
-        <Link to="/" className="logo" style={{ textDecoration: 'none' }}>TOP 2000</Link>
-        <nav className="nav">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/statistics" className="nav-link active">Statistics</Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="main-content">
         <div className="statistics-header">
@@ -174,7 +156,7 @@ function Statistics() {
                         </Link>
                       </td>
                       <td className="artist-cell">{song.artistName}</td>
-                      <td className="year-cell">{song.releaseYear || '�'}</td>
+                      <td className="year-cell">{song.releaseYear || '–'}</td>
                       <td className="position-cell current-pos">#{song.currentPosition}</td>
                       <td className="position-cell previous-pos">#{song.previousPosition}</td>
                       <td className="dropped-cell">
@@ -200,4 +182,4 @@ function Statistics() {
   );
 }
 
-export default Statistics;
+export default DroppedSongs;

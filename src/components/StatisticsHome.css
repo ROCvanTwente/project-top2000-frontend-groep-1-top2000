@@ -1,0 +1,239 @@
+/* Statistics Home Page Styles */
+
+.statistics-home-container {
+    min-height: 100vh;
+    width: 99vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+}
+
+/* Hero Section */
+.statistics-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+.statistics-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.statistics-hero-description {
+    font-size: 1.3rem;
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Statistics Grid */
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Statistics Cards */
+.statistics-card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+    .statistics-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #ff0000 0%, #cc0000 100%);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    .statistics-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .statistics-card:not(.disabled):hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(255, 0, 0, 0.3);
+        border-color: #ff0000;
+    }
+
+    .statistics-card.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        background-color: #222;
+    }
+
+        .statistics-card.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+/* Card Icon */
+.card-icon {
+    font-size: 3.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.statistics-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* Card Content */
+.card-content {
+    flex: 1;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #999;
+    line-height: 1.5;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    background-color: #444;
+    color: #ccc;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card Arrow */
+.card-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #ff0000;
+    transition: transform 0.3s ease;
+}
+
+.statistics-card:hover .card-arrow {
+    transform: translateX(10px);
+}
+
+/* Footer */
+.statistics-footer {
+    text-align: center;
+    padding: 40px 20px 60px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+    .back-button:hover {
+        background-color: #ff0000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .statistics-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .statistics-hero-description {
+        font-size: 1.1rem;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .card-description {
+        font-size: 0.95rem;
+    }
+
+    .card-arrow {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .statistics-hero {
+        padding: 40px 15px 30px;
+    }
+
+    .statistics-hero-title {
+        font-size: 2rem;
+    }
+
+    .statistics-card {
+        padding: 20px;
+    }
+
+    .back-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
