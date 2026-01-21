@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import SongDetail from './components/SongDetail'
 import Statistics from './components/Statistics'
 import API_BASE_URL from './config/api'
+import Faq from './components/Faq'
 import './App.css'
 
 function HomePage() {
@@ -119,7 +120,7 @@ function HomePage() {
             <a href="#list" className="nav-link">Lijst</a>
             <Link to="/statistics" className="nav-link">Statistics</Link>
             <a href="#stemmen" className="nav-link">Stemmen</a>
-            <a href="#info" className="nav-link">Info</a>
+            <Link to="/faq" className="nav-link">FAQ</Link>
             <a href="#account" className="nav-link">👤</a>
           </nav>
         </header>
@@ -140,7 +141,7 @@ function HomePage() {
             <a href="#list" className="nav-link">Lijst</a>
             <Link to="/statistics" className="nav-link">Statistics</Link>
             <a href="#stemmen" className="nav-link">Stemmen</a>
-            <a href="#info" className="nav-link">Info</a>
+            <Link to="/faq" className="nav-link">FAQ</Link>
             <a href="#account" className="nav-link">👤</a>
           </nav>
         </header>
@@ -165,7 +166,7 @@ function HomePage() {
           <a href="#list" className="nav-link">Lijst</a>
           <Link to="/statistics" className="nav-link">Statistics</Link>
           <a href="#stemmen" className="nav-link">Stemmen</a>
-          <a href="#info" className="nav-link">Info</a>
+          <Link to="/faq" className="nav-link">FAQ</Link>
           <a href="#account" className="nav-link">👤</a>
         </nav>
       </header>
@@ -303,6 +304,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/song/:slug" element={<SongDetail />} />
         <Route path="/statistics" element={<Statistics />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
     </Router>
   );
