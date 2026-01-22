@@ -1,0 +1,130 @@
+﻿/* Layout aligned with Contact/Statistics pages, centered card and defined answer box */
+
+.faq-container {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Hero / heading area */
+.faq-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+.faq-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ff0000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.faq-subtitle {
+    font-size: 1.15rem;
+    color: #999;
+}
+
+/* Content area with centered max width */
+.faq-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: block;
+}
+
+/* Grey card behind the FAQ list (centered and wider) */
+.faq-card {
+    background-color: #2a2a2a;
+    padding: 32px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Individual FAQ item */
+.faq-item {
+    width: 100%;
+    margin: 0 0 14px 0;
+    overflow: visible;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* Question button */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 18px 22px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background-color 0.15s;
+}
+
+    .faq-question:hover {
+        background-color: #333;
+    }
+
+.toggle-icon {
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+/* Answer section — add clear border and subtle background so it stands out */
+.faq-answer {
+    margin-top: 10px;
+    padding: 16px 20px;
+    color: #ddd;
+    line-height: 1.6;
+    border: 1px solid rgba(255,255,255,0.06);
+    background-color: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .faq-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-hero {
+        padding: 40px 15px 30px;
+    }
+
+    .faq-title {
+        font-size: 2.5rem;
+    }
+
+    .faq-card {
+        padding: 20px;
+    }
+
+    .faq-question {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 12px 14px 14px 14px;
+    }
+}
