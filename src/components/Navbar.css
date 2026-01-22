@@ -1,0 +1,93 @@
+/* Navbar Styles */
+.header {
+    background-color: #000000;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff0000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.npo-logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all 0.3s;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    background-color: #333333;
+    color: #ff0000;
+}
+
+.nav-link.active {
+    color: #ff0000;
+    border-bottom: 2px solid #ff0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 20px;
+    }
+
+    .npo-logo {
+        height: 32px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
