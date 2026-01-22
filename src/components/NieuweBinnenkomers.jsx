@@ -9,12 +9,12 @@ function NieuweBinnenkomers() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-
   const fetchEntries = async (selectedYear) => {
     setLoading(true);
     setError(null);
     try {
-    const response = await fetch(`https://localhost:7003/api/statistics/nieuwe-binnenkomers/${selectedYear}`);
+      // We gebruiken HTTPS poort 7003
+      const response = await fetch(`https://localhost:7003/api/statistics/nieuwe-binnenkomers/${selectedYear}`);
       
       if (!response.ok) {
         throw new Error('Fout bij ophalen gegevens');
@@ -23,12 +23,12 @@ function NieuweBinnenkomers() {
       const data = await response.json();
       setEntries(data);
     } catch (err) {
+      console.error(err);
       setError(err.message);
     } finally {
       setLoading(false);
     }
   };
-
 
   useEffect(() => {
     fetchEntries(year);
@@ -57,17 +57,17 @@ function NieuweBinnenkomers() {
             onChange={handleYearChange}
             className="year-select"
           >
-            {/* Genereer jaren van 2000 t/m 2024 */}
+            {/* Genereer jaren van 2024 t/m 1999 */}
             {Array.from({ length: 26 }, (_, i) => 2024 - i).map(y => (
               <option key={y} value={y}>{y}</option>
             ))}
           </select>
         </div>
 
-        {error && <div className="error-message">{error}</div>}
+        {error && <div className="error-message">Error: {error}</div>}
         
         {loading ? (
-          <div className="loading-spinner">Laden...</div>
+          <div className="loading-spinner">Gegevens laden...</div>
         ) : (
           <div className="table-responsive">
             <table className="stats-table">
@@ -80,23 +80,36 @@ function NieuweBinnenkomers() {
                 </tr>
               </thead>
               <tbody>
-                {entries.length > 0 ? (
-                  entries.map((entry, index) => (
-                    <tr key={index}>
-                      <td className="pos-cell">
-                        <span className="position-badge">{entry.positie}</span>
-                      </td>
-                      <td className="title-cell">{entry.titel}</td>
-                      <td>{entry.artiestNaam}</td>
-                      <td>{entry.uitgifteJaar}</td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan="4" className="no-data">Geen nieuwe binnenkomers gevonden voor dit jaar.</td>
-                  </tr>
-                )}
-              </tbody>
+  {entries && entries.length > 0 ? (
+    entries.map((entry, index) => (
+      <tr key={index}>
+        
+        
+        <td style={{ textAlign: 'center', width: '80px', fontWeight: 'bold', color: 'white' }}>
+           {entry.positie}
+        </td>
+
+    
+        <td className="title-cell">
+           {entry.titel}
+        </td>
+
+        <td>
+           {entry.artiestNaam}
+        </td>
+
+        <td>
+           {entry.uitgifteJaar}
+        </td>
+
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="4" className="no-data">Geen nieuwe binnenkomers gevonden voor {year}.</td>
+    </tr>
+  )}
+</tbody>
             </table>
           </div>
         )}
