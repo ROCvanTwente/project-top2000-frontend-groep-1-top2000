@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import SongDetail from './components/SongDetail'
 import StatisticsHome from './components/StatisticsHome'
+import NieuweBinnenkomers from './components/NieuweBinnenkomers';
 import DroppedSongs from './components/DroppedSongs'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
@@ -353,9 +354,11 @@ function App() {
         <Route path="/song/:slug" element={<SongDetail />} />
         <Route path="/statistics" element={<StatisticsHome />} />
         <Route path="/statistics/grootste-dalingen" element={<DroppedSongs />} />
+        <Route path="/statistics/nieuwe-binnenkomers" element={<NieuweBinnenkomers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/account" element={<Account />} />
+        
       </Routes>
     </Router>
   );

@@ -27,7 +27,7 @@ function StatisticsHome() {
       description: 'Nummers die nieuw zijn in de Top 2000',
       icon: '🆕',
       route: '/statistics/nieuwe-binnenkomers',
-      available: false
+      available: true
     },
     {
       id: 'top-artists',
