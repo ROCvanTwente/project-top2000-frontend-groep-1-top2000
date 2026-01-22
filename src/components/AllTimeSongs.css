@@ -1,0 +1,238 @@
+/* AllTimeSongs — use same look as Statistics.css but only for three columns (TITLE / ARTIST / YEAR)
+   Scoped to the AllTimeSongs view so it won't affect other statistic tables. */
+
+.statistics-container.alltime-page {
+    /* reuse container behaviour from Statistics.css; kept here for clarity if needed */
+    min-height: 100vh;
+    width: 99vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+}
+
+/* Header spacing uses existing .statistics-header; keep small tweak */
+.statistics-header {
+    text-align: center;
+    padding: 48px 20px 32px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+/* Table wrapper */
+.alltime-section .table-container {
+    overflow-x: auto;
+}
+
+/* Table appearance follows .statistics-table styles */
+.alltime-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2a;
+    font-family: inherit;
+}
+
+    /* header row looks like statistics */
+    .alltime-table thead {
+        background-color: #1a1a1a;
+        border-bottom: 3px solid #ff0000;
+    }
+
+    .alltime-table th {
+        padding: 18px 15px;
+        text-align: left;
+        font-weight: 700;
+        color: #ff0000;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* body rows */
+    .alltime-table tbody tr {
+        border-bottom: 1px solid #333;
+        transition: background-color 0.2s ease;
+    }
+
+        .alltime-table tbody tr:hover {
+            background-color: #333;
+        }
+
+    .alltime-table td {
+        padding: 20px 15px;
+        color: #ccc;
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+
+    /* Title cell similar to .title-cell in Statistics.css */
+    .alltime-table .title-cell {
+        font-weight: 600;
+        color: #fff;
+        min-width: 250px;
+    }
+
+/* Reuse song-title-link color from statistics */
+.song-title-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .song-title-link:hover {
+        color: #ff0000;
+        text-decoration: underline;
+    }
+
+/* Artist column styling like .artist-cell */
+.alltime-table .artist-cell {
+    color: #999;
+    min-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40ch;
+}
+
+/* Year column matches statistics .year-cell */
+.alltime-table .year-cell {
+    color: #777;
+    width: 100px;
+}
+
+/* No-image / thumbnails not used here, but keep placeholder style if needed */
+.song-thumbnail-placeholder {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+/* Footer / buttons reuse existing classes in Statistics.css; keep visual parity */
+.statistics-footer {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.back-button {
+    padding: 15px 40px;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .back-button:hover {
+        background-color: #ff0000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+    }
+
+/* Loading / error reuse */
+.loading, .error {
+    text-align: center;
+    padding: 100px 20px;
+    color: #999;
+    font-size: 1.5rem;
+}
+
+.error {
+    color: #ff6666;
+}
+
+.retry-button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .retry-button:hover {
+        background-color: #cc0000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+    }
+
+/* Responsive: match Statistics.css breakpoints and behavior */
+@media (max-width: 1200px) {
+    .alltime-table th,
+    .alltime-table td {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+
+    .alltime-table .title-cell {
+        min-width: 200px;
+    }
+
+    .alltime-table .artist-cell {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-title {
+        font-size: 2rem;
+    }
+
+    .statistics-description {
+        font-size: 1rem;
+    }
+
+    .alltime-table {
+        font-size: 0.8rem;
+    }
+
+        .alltime-table th,
+        .alltime-table td {
+            padding: 10px 5px;
+        }
+
+    /* On very small screens, stack rows similarly to the existing responsive pattern */
+    @media (max-width: 560px) {
+        .alltime-table thead {
+            display: none;
+        }
+
+        .alltime-table tbody td {
+            display: block;
+            width: 100%;
+        }
+
+        .alltime-table tbody tr {
+            margin-bottom: 0.75rem;
+            display: block;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .title-cell::before {
+            content: "Title: ";
+            font-weight: 600;
+            margin-right: 0.25rem;
+        }
+
+        .artist-cell::before {
+            content: "Artist: ";
+            font-weight: 600;
+            margin-right: 0.25rem;
+        }
+
+        .year-cell::before {
+            content: "Year: ";
+            font-weight: 600;
+            margin-right: 0.25rem;
+        }
+    }
+}

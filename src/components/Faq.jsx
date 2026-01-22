@@ -1,8 +1,15 @@
 ﻿import { useState } from "react";
 import "./Faq.css";
+import Navbar from "./Navbar";
 
 export default function Faq() {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndexes, setOpenIndexes] = useState([]);
+
+    const toggleIndex = (index) => {
+        setOpenIndexes(prev =>
+            prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
+        );
+    };
 
     const faqItems = [
         {
@@ -18,7 +25,7 @@ export default function Faq() {
         {
             question: "Staan alle nummers van de NPO Radio 2 Top 2000 ook in een Spotifylijst?",
             answer:
-                "Elk jaar updaten we weer onze Spotifylijst met alle nummers uit de NPO Radio 2 Top 2000."//https://open.spotify.com/playlist/1DTzz7Nh2rJBnyFbjsH1Mh?si=35329217ad4b4e94&nd=1&dlsi=13a0e1a29e1545aa
+                "Elk jaar updaten we weer onze Spotifylijst met alle nummers uit de NPO Radio 2 Top 2000."
         },
         {
             question: "Wat is het dj-team voor 2025?",
@@ -33,12 +40,12 @@ export default function Faq() {
         {
             question: "Hoe kan ik bij de NPO Radio 2 Top 2000 aanwezig zijn?",
             answer:
-                "Ticketverkoop voor het Top 2000 Café was op zaterdag 13 december om 10.00 uur. "
+                "Ticketverkoop voor het Top 2000 Café was op zaterdag 13 december om 10.00 uur."
         },
         {
             question: "Wanneer mag ik stemmen voor de NPO Radio 2 Top 2000?",
             answer:
-                "Je kon stemmen voor de NPO Radio 2 Top 2000 van 1 t/m 8 december. "
+                "Je kon stemmen voor de NPO Radio 2 Top 2000 van 1 t/m 8 december."
         },
         {
             question: "Hoe luister ik naar de NPO Radio 2 Top 2000?",
@@ -68,7 +75,7 @@ export default function Faq() {
         {
             question: "Waarom zenden jullie de NPO Radio 2 Top 2000 24 uur per dag uit?",
             answer:
-                "In 1999, het eerste jaar van de Top 2000, is ervoor gekozen de lijst als bijzonder project, achter elkaar uit te zenden. Uit onderzoek onder luisteraars is gebleken dat geen onderbreking charmant werd gevonden en de spanning van de NPO Radio 2 Top 2000 zo bewaard bleef. Sommige luisteraars zetten zelfs de wekker om hun favoriete nummers te horen. Overigens zou een NPO Radio 2 Top 2000 die over meerdere dagen wordt gespreid ook niet volledig beluisterd kunnen worden door de meeste mensen. Sterker nog; meer mensen zullen in geval van een langere periode (12 i.p.v. 6 dagen) moeten werken en dus juist minder kunnen luisteren."
+                "In 1999, het eerste jaar van the Top 2000, is ervoor gekozen de lijst als bijzonder project, achter elkaar uit te zenden."
         },
         {
             question: "Kan ik de tunes van de NPO Radio 2 Top 2000 ergens downloaden?",
@@ -78,37 +85,46 @@ export default function Faq() {
         {
             question: "Waarom brengen jullie de NPO Radio 2 Top 2000 niet helemaal uit op CD?",
             answer:
-                "Dat is een rechtenkwestie; lang niet alle platenmaatschappijen en/of artiesten geven toestemming voor het uitbrengen van hun nummer op zo'n CD. En wat zou een Top 2000 CD zijn zonder bijvoorbeeld de nummers van de The Beatles of The Rolling Stones? Op nporadio2.nl kun je de NPO Radio 2 Top 2000 editie 2024 terugluisteren. Ook zijn de edities van de NPO Radio 2 Top 2000 via het officiële NPO Radio 2 Spotify-account beschikbaar."
+                "Dat is een rechtenkwestie; lang niet alle platenmaatschappijen en/of artiesten geven toestemming voor het uitbrengen van hun nummer op zo'n CD."
         }
     ];
 
     return (
-        <div className="faq-page">
-            <h1>Veelgestelde vragen</h1>
+        // use the shared .app wrapper so page background / width match the rest of the site
+        <div className="app">
+            <Navbar />
+            <main className="main-content">
+                <div className="faq-hero">
+                    <h1 className="faq-title">Veelgestelde vragen</h1>
+                    <p className="faq-subtitle">Antwoorden op veelgestelde vragen over de Top 2000</p>
+                </div>
 
-            {faqItems.map((item, index) => {
-                const isOpen = openIndex === index;
+                <div className="faq-content">
+                    <section className="faq-card">
+                        {faqItems.map((item, index) => {
+                            const isOpen = openIndexes.includes(index);
 
-                return (
-                    <div key={index} className="faq-item">
-                        <button
-                            className="faq-question"
-                            onClick={() =>
-                                setOpenIndex(isOpen ? null : index)
-                            }
-                        >
-                            <span>{item.question}</span>
-                            <span>{isOpen ? "−" : "+"}</span>
-                        </button>
+                            return (
+                                <div key={index} className="faq-item">
+                                    <button
+                                        className="faq-question"
+                                        onClick={() => toggleIndex(index)}
+                                    >
+                                        <span>{item.question}</span>
+                                        <span className="toggle-icon">{isOpen ? "−" : "+"}</span>
+                                    </button>
 
-                        {isOpen && (
-                            <div className="faq-answer">
-                                {item.answer}
-                            </div>
-                        )}
-                    </div>
-                );
-            })}
+                                    {isOpen && (
+                                        <div className="faq-answer">
+                                            {item.answer}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </section>
+                </div>
+            </main>
         </div>
     );
 }

@@ -5,360 +5,349 @@ import '@splidejs/react-splide/css'
 import SongDetail from './components/SongDetail'
 import StatisticsHome from './components/StatisticsHome'
 import DroppedSongs from './components/DroppedSongs'
+import AllTimeSongs from './components/AllTimeSongs'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
+import Faq from './components/Faq'
 import API_BASE_URL from './config/api'
 import './App.css'
 
 function HomePage() {
-  const [songs, setSongs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const [totalSongs, setTotalSongs] = useState(0);
-  const pageSize = 50;
+    const [songs, setSongs] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const [totalSongs, setTotalSongs] = useState(0);
+    const pageSize = 50;
 
-  useEffect(() => {
-    fetchSongs(currentPage);
-  }, [currentPage]);
+    useEffect(() => {
+        fetchSongs(currentPage);
+    }, [currentPage]);
 
-  const fetchSongs = async (page) => {
-    try {
-      setLoading(true);
-      setError(null);
-      
-      const response = await fetch(`${API_BASE_URL}/songs?page=${page}&pageSize=${pageSize}`);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      
-      setSongs(data.songs);
-      setCurrentPage(data.currentPage);
-      setTotalPages(data.totalPages);
-      setTotalSongs(data.totalSongs);
-    } catch (err) {
-      console.error('Error fetching songs:', err);
-      setError(`Failed to load songs from ${API_BASE_URL}. Error: ${err.message}`);
-    } finally {
-      setLoading(false);
+    const fetchSongs = async (page) => {
+        try {
+            setLoading(true);
+            setError(null);
+
+            const response = await fetch(`${API_BASE_URL}/songs?page=${page}&pageSize=${pageSize}`);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            setSongs(data.songs);
+            setCurrentPage(data.currentPage);
+            setTotalPages(data.totalPages);
+            setTotalSongs(data.totalSongs);
+        } catch (err) {
+            console.error('Error fetching songs:', err);
+            setError(`Failed to load songs from ${API_BASE_URL}. Error: ${err.message}`);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const getSongSlug = (title) => {
+        return title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    };
+
+    const getPositionChangeIcon = (change) => {
+        if (!change || change === 0) return '–';
+        if (change > 0) return '↑';
+        return '↓';
+    };
+
+    const getPositionChangeClass = (change) => {
+        if (!change || change === 0) return 'no-change';
+        if (change > 0) return 'position-up';
+        return 'position-down';
+    };
+
+    const handlePreviousPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+            window.scrollTo(0, 0);
+        }
+    };
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(currentPage + 1);
+            window.scrollTo(0, 0);
+        }
+    };
+
+    const handlePageClick = (page) => {
+        setCurrentPage(page);
+        window.scrollTo(0, 0);
+    };
+
+    const getPageNumbers = () => {
+        const pages = [];
+        const maxPagesToShow = 7;
+
+        if (totalPages <= maxPagesToShow) {
+            for (let i = 1; i <= totalPages; i++) {
+                pages.push(i);
+            }
+        } else {
+            if (currentPage <= 4) {
+                for (let i = 1; i <= 5; i++) pages.push(i);
+                pages.push('...');
+                pages.push(totalPages);
+            } else if (currentPage >= totalPages - 3) {
+                pages.push(1);
+                pages.push('...');
+                for (let i = totalPages - 4; i <= totalPages; i++) pages.push(i);
+            } else {
+                pages.push(1);
+                pages.push('...');
+                for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i);
+                pages.push('...');
+                pages.push(totalPages);
+            }
+        }
+
+        return pages;
+    };
+
+    const featuredSongs = songs.slice(0, 5);
+
+    if (loading && songs.length === 0) {
+        return (
+            <div className="app">
+                <Navbar />
+                <main className="main-content">
+                    <div className="loading">Loading Top 2000...</div>
+                </main>
+            </div>
+        );
     }
-  };
 
-  const getSongSlug = (title) => {
-    return title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  };
-
-  const getPositionChangeIcon = (change) => {
-    if (!change || change === 0) return '–';
-    if (change > 0) return '↑';
-    return '↓';
-  };
-
-  const getPositionChangeClass = (change) => {
-    if (!change || change === 0) return 'no-change';
-    if (change > 0) return 'position-up';
-    return 'position-down';
-  };
-
-  const handlePreviousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-      window.scrollTo(0, 0);
-    }
-  };
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-      window.scrollTo(0, 0);
-    }
-  };
-
-  const handlePageClick = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-  };
-
-  const getPageNumbers = () => {
-    const pages = [];
-    const maxPagesToShow = 7;
-    
-    if (totalPages <= maxPagesToShow) {
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
-    } else {
-      if (currentPage <= 4) {
-        for (let i = 1; i <= 5; i++) pages.push(i);
-        pages.push('...');
-        pages.push(totalPages);
-      } else if (currentPage >= totalPages - 3) {
-        pages.push(1);
-        pages.push('...');
-        for (let i = totalPages - 4; i <= totalPages; i++) pages.push(i);
-      } else {
-        pages.push(1);
-        pages.push('...');
-        for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i);
-        pages.push('...');
-        pages.push(totalPages);
-      }
-    }
-    
-    return pages;
-  };
-
-  const featuredSongs = songs.slice(0, 5);
-
-  if (loading && songs.length === 0) {
-    return (
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <div className="loading">Loading Top 2000...</div>
-        </main>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <div className="error">
-            <p>{error}</p>
-            <button onClick={() => fetchSongs(currentPage)} className="retry-button">
-              Retry
-            </button>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-  return (
-    <div className="app">
-      <Navbar />
-
-      <main className="main-content">
-        {/* Splide Slider */}
-        {currentPage === 1 && (
-          <section className="hero-slider">
-            <Splide
-              options={{
-                type: 'loop',
-                autoplay: true,
-                interval: 5000,
-                pauseOnHover: true,
-                resetProgress: false,
-                arrows: true,
-                pagination: true,
-                height: '500px',
-              }}
-            >
-              <SplideSlide>
-                <div className="slide-content slide-1">
-                  <div className="slide-overlay">
-                    <h2>TOP 2000 2024</h2>
-                    <p>Stem nu op jouw favoriete nummers!</p>
-                    <Link to="/statistics" className="slide-button">Bekijk Statistieken</Link>
-                  </div>
-                </div>
-              </SplideSlide>
-              <SplideSlide>
-                <div className="slide-content slide-2">
-                  <div className="slide-overlay">
-                    <h2>Ontdek de Grootste Dalingen</h2>
-                    <p>Zie welke nummers het meest gedaald zijn dit jaar</p>
-                    <Link to="/statistics/grootste-dalingen" className="slide-button">Meer Info</Link>
-                  </div>
-                </div>
-              </SplideSlide>
-              <SplideSlide>
-                <div className="slide-content slide-3">
-                  <div className="slide-overlay">
-                    <h2>2000 Nummers, Oneindig Veel Herinneringen</h2>
-                    <p>Deel jouw verhaal met ons</p>
-                    <Link to="/contact" className="slide-button">Contact</Link>
-                  </div>
-                </div>
-              </SplideSlide>
-            </Splide>
-          </section>
-        )}
-
-        {currentPage === 1 && featuredSongs.length > 0 && (
-          <section className="featured-section">
-            <h2 className="section-title">TOP 2000 2024</h2>
-            <div className="featured-albums">
-              {featuredSongs.map((song) => (
-                <Link 
-                  key={song.songId} 
-                  to={`/song/${getSongSlug(song.titel)}`}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
-                >
-                  <div className="album-card">
-                    <div className="position-badge">{song.currentPosition}</div>
-                    {song.imgUrl ? (
-                      <img src={song.imgUrl} alt={song.titel} className="album-cover" />
-                    ) : (
-                      <div className="album-cover-placeholder">
-                        <span>🎵</span>
-                      </div>
-                    )}
-                    <div className="album-info">
-                      <p className="album-title">{song.titel}</p>
-                      <p className="album-artist">{song.artistName}</p>
+    if (error) {
+        return (
+            <div className="app">
+                <Navbar />
+                <main className="main-content">
+                    <div className="error">
+                        <p>{error}</p>
+                        <button onClick={() => fetchSongs(currentPage)} className="retry-button">
+                            Retry
+                        </button>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                </main>
             </div>
-          </section>
-        )}
+        );
+    }
 
-        <section className="table-section">
-          <div className="table-header-bar">
-            <h3>TOP 2000 2024 - Page {currentPage} of {totalPages} ({totalSongs} songs)</h3>
-          </div>
-          <div className="table-container">
-            <table className="songs-table">
-              <thead>
-                <tr>
-                  <th>POS</th>
-                  <th>±</th>
-                  <th>IMAGE</th>
-                  <th>TITLE</th>
-                  <th>ARTIST</th>
-                  <th>YEAR</th>
-                  <th>ACTION</th>
-                </tr>
-              </thead>
-              <tbody>
-                {songs.map((song) => (
-                  <tr key={song.songId}>
-                    <td className="position-cell">{song.currentPosition}</td>
-                    <td className={`change-cell ${getPositionChangeClass(song.positionChange)}`}>
-                      <span className="change-value">
-                        {song.positionChange ? Math.abs(song.positionChange) : '–'}
-                      </span>
-                      <span className="change-icon">
-                        {getPositionChangeIcon(song.positionChange)}
-                      </span>
-                    </td>
-                    <td className="image-cell">
-                      {song.imgUrl ? (
-                        <img src={song.imgUrl} alt={song.titel} className="song-thumbnail" />
-                      ) : (
-                        <div className="song-thumbnail-placeholder">🎵</div>
-                      )}
-                    </td>
-                    <td className="title-cell">
-                      <Link 
-                        to={`/song/${getSongSlug(song.titel)}`}
-                        className="song-title-link"
-                      >
-                        {song.titel}
-                      </Link>
-                    </td>
-                    <td className="artist-cell">{song.artistName}</td>
-                    <td className="year-cell">{song.releaseYear || '–'}</td>
-                    <td className="action-cell">
-                      <button className="listen-button">Listen Now</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+    return (
+        <div className="app">
+            <Navbar />
 
-          {/* Pagination Controls */}
-          <div className="pagination">
-            <button 
-              className="pagination-button" 
-              onClick={handlePreviousPage}
-              disabled={currentPage === 1}
-            >
-              ← Previous
-            </button>
-            
-            <div className="pagination-numbers">
-              {getPageNumbers().map((page, index) => (
-                page === '...' ? (
-                  <span key={`ellipsis-${index}`} className="pagination-ellipsis">...</span>
-                ) : (
-                  <button
-                    key={page}
-                    className={`pagination-number ${currentPage === page ? 'active' : ''}`}
-                    onClick={() => handlePageClick(page)}
-                  >
-                    {page}
-                  </button>
-                )
-              ))}
-            </div>
+            <main className="main-content">
+                {/* Splide Slider */}
+                {currentPage === 1 && (
+                    <section className="hero-slider">
+                        <Splide
+                            options={{
+                                type: 'loop',
+                                autoplay: true,
+                                interval: 5000,
+                                pauseOnHover: true,
+                                resetProgress: false,
+                                arrows: true,
+                                pagination: true,
+                                height: '500px',
+                            }}
+                        >
+                            <SplideSlide>
+                                <div className="slide-content slide-1">
+                                    <div className="slide-overlay">
+                                        <h2>TOP 2000 2024</h2>
+                                        <p>Stem nu op jouw favoriete nummers!</p>
+                                        <Link to="/statistics" className="slide-button">Bekijk Statistieken</Link>
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                            <SplideSlide>
+                                <div className="slide-content slide-2">
+                                    <div className="slide-overlay">
+                                        <h2>Ontdek de Grootste Dalingen</h2>
+                                        <p>Zie welke nummers het meest gedaald zijn dit jaar</p>
+                                        <Link to="/statistics/grootste-dalingen" className="slide-button">Meer Info</Link>
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                            <SplideSlide>
+                                <div className="slide-content slide-3">
+                                    <div className="slide-overlay">
+                                        <h2>2000 Nummers, Oneindig Veel Herinneringen</h2>
+                                        <p>Deel jouw verhaal met ons</p>
+                                        <Link to="/contact" className="slide-button">Contact</Link>
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                        </Splide>
+                    </section>
+                )}
 
-            <button 
-              className="pagination-button" 
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-            >
-              Next →
-            </button>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
-}
+                {currentPage === 1 && featuredSongs.length > 0 && (
+                    <section className="featured-section">
+                        <h2 className="section-title">TOP 2000 2024</h2>
+                        <div className="featured-albums">
+                            {featuredSongs.map((song) => (
+                                <Link
+                                    key={song.songId}
+                                    to={`/song/${getSongSlug(song.titel)}`}
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                >
+                                    <div className="album-card">
+                                        <div className="position-badge">{song.currentPosition}</div>
+                                        {song.imgUrl ? (
+                                            <img src={song.imgUrl} alt={song.titel} className="album-cover" />
+                                        ) : (
+                                            <div className="album-cover-placeholder">
+                                                <span>🎵</span>
+                                            </div>
+                                        )}
+                                        <div className="album-info">
+                                            <p className="album-title">{song.titel}</p>
+                                            <p className="album-artist">{song.artistName}</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+                )}
 
-function FAQ() {
-  return (
-    <div className="app">
-      <Navbar />
-      <main className="main-content">
-        <div className="faq-container">
-          <h1 className="page-title">Veelgestelde Vragen</h1>
-          <p className="page-subtitle">Binnenkort beschikbaar...</p>
+                <section className="table-section">
+                    <div className="table-header-bar">
+                        <h3>TOP 2000 2024 - Page {currentPage} of {totalPages} ({totalSongs} songs)</h3>
+                    </div>
+                    <div className="table-container">
+                        <table className="songs-table">
+                            <thead>
+                                <tr>
+                                    <th>POS</th>
+                                    <th>±</th>
+                                    <th>IMAGE</th>
+                                    <th>TITLE</th>
+                                    <th>ARTIST</th>
+                                    <th>YEAR</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {songs.map((song) => (
+                                    <tr key={song.songId}>
+                                        <td className="position-cell">{song.currentPosition}</td>
+                                        <td className={`change-cell ${getPositionChangeClass(song.positionChange)}`}>
+                                            <span className="change-value">
+                                                {song.positionChange ? Math.abs(song.positionChange) : '–'}
+                                            </span>
+                                            <span className="change-icon">
+                                                {getPositionChangeIcon(song.positionChange)}
+                                            </span>
+                                        </td>
+                                        <td className="image-cell">
+                                            {song.imgUrl ? (
+                                                <img src={song.imgUrl} alt={song.titel} className="song-thumbnail" />
+                                            ) : (
+                                                <div className="song-thumbnail-placeholder">🎵</div>
+                                            )}
+                                        </td>
+                                        <td className="title-cell">
+                                            <Link
+                                                to={`/song/${getSongSlug(song.titel)}`}
+                                                className="song-title-link"
+                                            >
+                                                {song.titel}
+                                            </Link>
+                                        </td>
+                                        <td className="artist-cell">{song.artistName}</td>
+                                        <td className="year-cell">{song.releaseYear || '–'}</td>
+                                        <td className="action-cell">
+                                            <button className="listen-button">Listen Now</button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {/* Pagination Controls */}
+                    <div className="pagination">
+                        <button
+                            className="pagination-button"
+                            onClick={handlePreviousPage}
+                            disabled={currentPage === 1}
+                        >
+                            ← Previous
+                        </button>
+
+                        <div className="pagination-numbers">
+                            {getPageNumbers().map((page, index) => (
+                                page === '...' ? (
+                                    <span key={`ellipsis-${index}`} className="pagination-ellipsis">...</span>
+                                ) : (
+                                    <button
+                                        key={page}
+                                        className={`pagination-number ${currentPage === page ? 'active' : ''}`}
+                                        onClick={() => handlePageClick(page)}
+                                    >
+                                        {page}
+                                    </button>
+                                )
+                            ))}
+                        </div>
+
+                        <button
+                            className="pagination-button"
+                            onClick={handleNextPage}
+                            disabled={currentPage === totalPages}
+                        >
+                            Next →
+                        </button>
+                    </div>
+                </section>
+            </main>
         </div>
-      </main>
-    </div>
-  );
+    );
 }
 
 function Account() {
-  return (
-    <div className="app">
-      <Navbar />
-      <main className="main-content">
-        <div className="account-container">
-          <h1 className="page-title">Account</h1>
-          <p className="page-subtitle">Binnenkort beschikbaar...</p>
+    return (
+        <div className="app">
+            <Navbar />
+            <main className="main-content">
+                <div className="account-container">
+                    <h1 className="page-title">Account</h1>
+                    <p className="page-subtitle">Binnenkort beschikbaar...</p>
+                </div>
+            </main>
         </div>
-      </main>
-    </div>
-  );
+    );
 }
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/song/:slug" element={<SongDetail />} />
-        <Route path="/statistics" element={<StatisticsHome />} />
-        <Route path="/statistics/grootste-dalingen" element={<DroppedSongs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/account" element={<Account />} />
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/song/:slug" element={<SongDetail />} />
+                <Route path="/statistics" element={<StatisticsHome />} />
+                <Route path="/statistics/grootste-dalingen" element={<DroppedSongs />} />
+                <Route path="/statistics/all-time" element={<AllTimeSongs />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/faq" element={<Faq />} />
+                <Route path="/account" element={<Account />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App

@@ -1,45 +1,70 @@
-﻿/* Page container */
-.faq-page {
+﻿/* Layout aligned with Contact/Statistics pages, centered card and defined answer box */
+
+.faq-container {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
     background-color: #1a1a1a;
     color: #ffffff;
-    padding: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-    /* Content wrapper */
-    .faq-page h1 {
-        max-width: 1200px;
-        margin: 0 auto 40px auto;
-        color: #ff0000;
-        font-size: 32px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+/* Hero / heading area */
+.faq-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+}
 
-/* FAQ item (card style) */
-.faq-item {
-    max-width: 1200px;
-    margin: 0 auto 15px auto;
+.faq-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ff0000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.faq-subtitle {
+    font-size: 1.15rem;
+    color: #999;
+}
+
+/* Content area with centered max width */
+.faq-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: block;
+}
+
+/* Grey card behind the FAQ list (centered and wider) */
+.faq-card {
     background-color: #2a2a2a;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #333;
-    transition: box-shadow 0.3s, transform 0.3s;
+    padding: 32px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-    .faq-item:hover {
-        box-shadow: 0 6px 12px rgba(255, 0, 0, 0.25);
-        transform: translateY(-2px);
-    }
+/* Individual FAQ item */
+.faq-item {
+    width: 100%;
+    margin: 0 0 14px 0;
+    overflow: visible;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.02);
+}
 
 /* Question button */
 .faq-question {
     width: 100%;
     background: none;
     border: none;
-    padding: 20px 25px;
+    padding: 18px 22px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
@@ -48,61 +73,58 @@
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    transition: background-color 0.3s;
+    transition: background-color 0.15s;
 }
 
     .faq-question:hover {
         background-color: #333;
     }
 
-    /* Plus / minus icon */
-    .faq-question span:last-child {
-        color: #ff0000;
-        font-size: 24px;
-        font-weight: bold;
-        margin-left: 20px;
-    }
-
-/* Answer section */
-.faq-answer {
-    padding: 0 25px 25px 25px;
-    color: #ccc;
-    line-height: 1.6;
-    border-top: 1px solid #333;
-    animation: fadeIn 0.3s ease-in-out;
+.toggle-icon {
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 16px;
 }
 
-/* Subtle animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Answer section — add clear border and subtle background so it stands out */
+.faq-answer {
+    margin-top: 10px;
+    padding: 16px 20px;
+    color: #ddd;
+    line-height: 1.6;
+    border: 1px solid rgba(255,255,255,0.06);
+    background-color: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .faq-card {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
-    .faq-page {
+    .faq-hero {
+        padding: 40px 15px 30px;
+    }
+
+    .faq-title {
+        font-size: 2.5rem;
+    }
+
+    .faq-card {
         padding: 20px;
     }
 
-        .faq-page h1 {
-            font-size: 26px;
-            margin-bottom: 25px;
-        }
-
     .faq-question {
-        padding: 15px 20px;
+        padding: 14px 16px;
         font-size: 15px;
     }
 
     .faq-answer {
-        padding: 0 20px 20px 20px;
-        font-size: 14px;
+        padding: 12px 14px 14px 14px;
     }
 }
