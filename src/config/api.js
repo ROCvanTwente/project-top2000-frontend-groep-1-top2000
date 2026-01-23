@@ -5,8 +5,8 @@
  */
 
 // Change this URL when deploying or changing backend location
-// export const API_BASE_URL = 'https://top2000project.runasp.net/api';       // voor live
-export const API_BASE_URL = 'https://localhost:7003/api';                   // voor lokaal testen
+ export const API_BASE_URL = 'https://top2000project.runasp.net/api';       // voor live
+//export const API_BASE_URL = 'https://localhost:7003/api';                   // voor lokaal testen
 
 /**
  * API Endpoints
