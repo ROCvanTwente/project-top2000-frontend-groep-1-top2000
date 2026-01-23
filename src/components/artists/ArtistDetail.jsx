@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import Navbar from '../Navbar'; 
 import './ArtistDetail.css';
+import { API_ENDPOINTS } from '../../config/api';
 
 function ArtistDetail() {
   const { id } = useParams();
@@ -10,8 +11,7 @@ function ArtistDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Let op de poort 7003
-    fetch(`https://localhost:7003/api/artists/${id}`)
+    fetch(API_ENDPOINTS.artists.detail(id))
       .then(res => {
         if (!res.ok) throw new Error("Artist not found");
         return res.json();

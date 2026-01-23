@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar'; 
-import './NieuweBinnenkomers.css'; // We hergebruiken de CSS weer
+import './NieuweBinnenkomers.css'; 
+import { API_ENDPOINTS } from '../config/api';
 
 function OpnieuwBinnenkomers() {
   const [year, setYear] = useState(2024); 
@@ -13,8 +14,7 @@ function OpnieuwBinnenkomers() {
     setLoading(true);
     setError(null);
     try {
-      // Nieuwe endpoint
-      const response = await fetch(`https://localhost:7003/api/statistics/opnieuw-binnenkomers/${selectedYear}`);
+      const response = await fetch(API_ENDPOINTS.statistics.reEntries(selectedYear));
       
       if (!response.ok) throw new Error('Fout bij ophalen gegevens');
       

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar'; 
 import './NieuweBinnenkomers.css';
+import { API_ENDPOINTS } from '../config/api';
 
 function NieuweBinnenkomers() {
   const [year, setYear] = useState(2023); 
@@ -13,8 +14,7 @@ function NieuweBinnenkomers() {
     setLoading(true);
     setError(null);
     try {
-      // We gebruiken HTTPS poort 7003
-      const response = await fetch(`https://localhost:7003/api/statistics/nieuwe-binnenkomers/${selectedYear}`);
+      const response = await fetch(API_ENDPOINTS.statistics.newEntries(selectedYear));
       
       if (!response.ok) {
         throw new Error('Fout bij ophalen gegevens');

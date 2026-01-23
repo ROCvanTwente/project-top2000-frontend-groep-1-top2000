@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar'; 
 import '../NieuweBinnenkomers.css';
+import { API_ENDPOINTS } from '../../config/api';
 
 function Top2000Lijst() {
   const [year, setYear] = useState(2023);
@@ -13,7 +14,7 @@ function Top2000Lijst() {
     const fetchList = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`https://localhost:7003/api/statistics/full-list/${year}`);
+        const response = await fetch(API_ENDPOINTS.statistics.fullList(year));
         if(response.ok) {
             const data = await response.json();
             setEntries(data);
@@ -78,7 +79,7 @@ function Top2000Lijst() {
               <tbody>
                 {filteredEntries.slice(0, 1000).map(entry => ( 
                   <tr key={entry.position}>
-                    <td style={{ textAlign: 'center', width: '80px', fontWeight: 'bold', color: '#d4af37' }}>
+                    <td style={{ textAlign: 'center', width: '80px', fontWeight: 'bold', color: 'white' }}>
                         {entry.position}
                     </td>
                     <td className="title-cell">

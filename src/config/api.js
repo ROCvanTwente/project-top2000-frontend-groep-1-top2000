@@ -1,16 +1,12 @@
 /**
  * API Configuration
- * 
- * This is the SINGLE SOURCE OF TRUTH for all API endpoints.
+ * * This is the SINGLE SOURCE OF TRUTH for all API endpoints.
  * Change the API_BASE_URL here to update it across the entire application.
  */
 
 // Change this URL when deploying or changing backend location
-//export const API_BASE_URL = 'https://top2000project.runasp.net';        // voor live: https://top2000project.runasp.net
- export const API_BASE_URL = 'https://localhost:7003/api';              // voor lokaal testen
-
-// You can also use environment variables (recommended for production):
-// export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://localhost:7003/api';
+// export const API_BASE_URL = 'https://top2000project.runasp.net/api';       // voor live
+export const API_BASE_URL = 'https://localhost:7003/api';                   // voor lokaal testen
 
 /**
  * API Endpoints
@@ -23,8 +19,21 @@ export const API_ENDPOINTS = {
         byId: (id) => `${API_BASE_URL}/songs/${id}`,
         history: (id) => `${API_BASE_URL}/songs/${id}/history`
     },
+    artists: {
+        // Haalt details van 1 artiest op (met songs)
+        detail: (id) => `${API_BASE_URL}/artists/${id}`,
+        // Haalt alle artiesten op met aantal noteringen
+        allWithCounts: `${API_BASE_URL}/artists/all-with-counts`
+    },
     statistics: {
-        droppedSongs: (year) => `${API_BASE_URL}/songs/statistics/dropped-songs?year=${year}`
+        // Nieuwe Binnenkomers
+        newEntries: (year) => `${API_BASE_URL}/statistics/nieuwe-binnenkomers/${year}`,
+        // Verdwenen Nummers
+        lostSongs: (year) => `${API_BASE_URL}/statistics/verdwenen-nummers/${year}`,
+        // Opnieuw Binnenkomers (Re-entries)
+        reEntries: (year) => `${API_BASE_URL}/statistics/opnieuw-binnenkomers/${year}`,
+        // De volledige lijst van een jaar
+        fullList: (year) => `${API_BASE_URL}/statistics/full-list/${year}`
     },
     auth: {
         login: `${API_BASE_URL}/auth/login`,

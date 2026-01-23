@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import '../NieuweBinnenkomers.css'; 
+import { API_ENDPOINTS } from '../../config/api';
 
 function AllArtists() {
   const [artists, setArtists] = useState([]);
@@ -12,7 +13,7 @@ function AllArtists() {
   const [itemsPerPage] = useState(20); 
 
   useEffect(() => {
-    fetch('https://localhost:7003/api/artists/all-with-counts')
+    fetch(API_ENDPOINTS.artists.allWithCounts)
       .then(res => res.json())
       .then(data => { 
           setArtists(data); 

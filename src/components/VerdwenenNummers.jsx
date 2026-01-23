@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar'; 
-import './NieuweBinnenkomers.css'; // We hergebruiken de werkende styling!
+import './NieuweBinnenkomers.css'; 
+import { API_ENDPOINTS } from '../config/api';
 
 function VerdwenenNummers() {
   const [year, setYear] = useState(2024); 
@@ -13,8 +14,7 @@ function VerdwenenNummers() {
     setLoading(true);
     setError(null);
     try {
-      // Let op: Ander endpoint
-      const response = await fetch(`https://localhost:7003/api/statistics/verdwenen-nummers/${selectedYear}`);
+     const response = await fetch(API_ENDPOINTS.statistics.lostSongs(selectedYear));
       
       if (!response.ok) throw new Error('Fout bij ophalen gegevens');
       
