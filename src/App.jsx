@@ -5,6 +5,7 @@ import '@splidejs/react-splide/css'
 import SongDetail from './components/SongDetail'
 import StatisticsHome from './components/StatisticsHome'
 import NieuweBinnenkomers from './components/NieuweBinnenkomers';
+import VerdwenenNummers from './components/VerdwenenNummers';
 import DroppedSongs from './components/DroppedSongs'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
@@ -355,6 +356,7 @@ function App() {
         <Route path="/statistics" element={<StatisticsHome />} />
         <Route path="/statistics/grootste-dalingen" element={<DroppedSongs />} />
         <Route path="/statistics/nieuwe-binnenkomers" element={<NieuweBinnenkomers />} />
+        <Route path="/statistics/verdwenen-nummers" element={<VerdwenenNummers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/account" element={<Account />} />

@@ -30,12 +30,12 @@ function StatisticsHome() {
       available: true
     },
     {
-      id: 'top-artists',
-      title: 'Top Artiesten',
-      description: 'Artiesten met de meeste nummers in de lijst',
-      icon: '🎤',
-      route: '/statistics/top-artiesten',
-      available: false
+      id: 'lost-songs',
+      title: 'Verdwenen Nummers',
+      description: 'Nummers die uit de lijst zijn gevallen',
+      icon: '👋', 
+      route: '/statistics/verdwenen-nummers',
+      available: true
     },
     {
       id: 'decades',
