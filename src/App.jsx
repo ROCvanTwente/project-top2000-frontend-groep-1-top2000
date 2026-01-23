@@ -7,6 +7,9 @@ import StatisticsHome from './components/StatisticsHome'
 import NieuweBinnenkomers from './components/NieuweBinnenkomers';   
 import VerdwenenNummers from './components/VerdwenenNummers';
 import OpnieuwBinnenkomers from './components/OpnieuwBinnenkomers';
+import Top2000Lijst from './components/lists/Top2000Lijst';
+import ArtistDetail from './components/artists/ArtistDetail';
+import AllArtists from './components/artists/AllArtists';
 import DroppedSongs from './components/DroppedSongs'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
@@ -359,6 +362,9 @@ function App() {
         <Route path="/statistics/nieuwe-binnenkomers" element={<NieuweBinnenkomers />} />
         <Route path="/statistics/verdwenen-nummers" element={<VerdwenenNummers />} />
         <Route path="/statistics/opnieuw-binnenkomers" element={<OpnieuwBinnenkomers />} />
+        <Route path="/lijst" element={<Top2000Lijst />} />
+        <Route path="/artiesten" element={<AllArtists />} />
+        <Route path="/artist/:id" element={<ArtistDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/account" element={<Account />} />

@@ -18,15 +18,32 @@ function Navbar() {
         <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
           Home
         </Link>
+        
+      
+        <Link to="/lijst" className={`nav-link ${isActive('/lijst') ? 'active' : ''}`}>
+          De Lijst
+        </Link>
+
+      
+        <Link 
+          to="/artiesten" 
+          className={`nav-link ${isActive('/artiesten') || location.pathname.startsWith('/artist/') ? 'active' : ''}`}
+        >
+          Artiesten
+        </Link>
+
         <Link to="/statistics" className={`nav-link ${location.pathname.startsWith('/statistics') ? 'active' : ''}`}>
           Statistieken
         </Link>
+        
         <Link to="/faq" className={`nav-link ${isActive('/faq') ? 'active' : ''}`}>
           FAQ
         </Link>
+        
         <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>
           Contact
         </Link>
+        
         <Link to="/account" className={`nav-link ${isActive('/account') ? 'active' : ''}`}>
           👤
         </Link>
