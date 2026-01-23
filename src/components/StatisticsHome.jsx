@@ -36,6 +36,20 @@ function StatisticsHome() {
       icon: '👋', 
       route: '/statistics/verdwenen-nummers',
       available: true
+      id: 'same-position',
+      title: 'Zelfde Positie',
+      description: 'Nummers die op dezelfde positie zijn blijven staan',
+      icon: '🎯',
+      route: '/statistics/zelfde-positie',
+      available: true
+    },
+    {
+      id: 'top-artists',
+      title: 'Top Artiesten',
+      description: 'Artiesten met de meeste nummers in de lijst',
+      icon: '🎤',
+      route: '/statistics/top-artiesten',
+      available: false
     },
     {
       id: 're-entries',

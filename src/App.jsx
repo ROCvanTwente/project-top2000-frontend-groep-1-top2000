@@ -11,6 +11,7 @@ import Top2000Lijst from './components/lists/Top2000Lijst';
 import ArtistDetail from './components/artists/ArtistDetail';
 import AllArtists from './components/artists/AllArtists';
 import DroppedSongs from './components/DroppedSongs'
+import SamePositionSongs from './components/SamePositionSongs'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import API_BASE_URL from './config/api'

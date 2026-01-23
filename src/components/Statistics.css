@@ -175,6 +175,10 @@
     color: #66ff66;
 }
 
+.same-position {
+    color: #ffaa00;
+}
+
 .dropped-cell {
     text-align: center;
     width: 120px;
