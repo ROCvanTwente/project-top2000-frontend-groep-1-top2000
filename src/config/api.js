@@ -33,7 +33,9 @@ export const API_ENDPOINTS = {
         // Opnieuw Binnenkomers (Re-entries)
         reEntries: (year) => `${API_BASE_URL}/statistics/opnieuw-binnenkomers/${year}`,
         // De volledige lijst van een jaar
-        fullList: (year) => `${API_BASE_URL}/statistics/full-list/${year}`
+        fullList: (year) => `${API_BASE_URL}/statistics/full-list/${year}`,
+        // Zelfde Positie
+        samePosition: (year) => `${API_BASE_URL}/statistics/zelfde-positie/${year}`
     },
     auth: {
         login: `${API_BASE_URL}/auth/login`,

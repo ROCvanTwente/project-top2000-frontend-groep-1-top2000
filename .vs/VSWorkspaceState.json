@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\config"
   ],
-  "SelectedNode": "\\C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000",
+  "SelectedNode": "\\src\\config\\api.js",
   "PreviewInSolutionExplorer": false
 }

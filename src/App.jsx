@@ -6,6 +6,7 @@ import SongDetail from './components/SongDetail'
 import StatisticsHome from './components/StatisticsHome'
 import NieuweBinnenkomers from './components/NieuweBinnenkomers';   
 import VerdwenenNummers from './components/VerdwenenNummers';
+import ZelfdePositie from './components/ZelfdePositiePage';
 import OpnieuwBinnenkomers from './components/OpnieuwBinnenkomers';
 import Top2000Lijst from './components/lists/Top2000Lijst';
 import ArtistDetail from './components/artists/ArtistDetail';
@@ -363,6 +364,7 @@ function App() {
         <Route path="/statistics/nieuwe-binnenkomers" element={<NieuweBinnenkomers />} />
         <Route path="/statistics/verdwenen-nummers" element={<VerdwenenNummers />} />
         <Route path="/statistics/opnieuw-binnenkomers" element={<OpnieuwBinnenkomers />} />
+        <Route path="/statistics/zelfde-positie" element={<ZelfdePositie />} />
         <Route path="/lijst" element={<Top2000Lijst />} />
         <Route path="/artiesten" element={<AllArtists />} />
         <Route path="/artist/:id" element={<ArtistDetail />} />

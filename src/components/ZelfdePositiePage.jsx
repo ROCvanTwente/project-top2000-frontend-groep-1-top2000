@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import API_BASE_URL from '../config/api';
-import './StatisticPage.css';
+import Navbar from './Navbar';
+import { API_ENDPOINTS } from '../config/api';
 
 function ZelfdePositiePage() {
   const [songs, setSongs] = useState([]);
@@ -25,12 +25,15 @@ function ZelfdePositiePage() {
       setLoading(true);
       setError(null);
       
-      const url = `${API_BASE_URL}/statistics/zelfde-positie/${selectedYear}`;
+      const url = API_ENDPOINTS.statistics.samePosition(selectedYear);
       console.log('Fetching zelfde positie from:', url);
       
       const response = await fetch(url);
       
       if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error('Dit endpoint bestaat nog niet op de backend. Neem contact op met de backend developers om /api/statistics/zelfde-positie/{year} te implementeren.');
+        }
         const errorData = await response.json().catch(() => null);
         const errorMessage = errorData?.message || `HTTP ${response.status}: ${response.statusText}`;
         console.error('API Error:', errorMessage);

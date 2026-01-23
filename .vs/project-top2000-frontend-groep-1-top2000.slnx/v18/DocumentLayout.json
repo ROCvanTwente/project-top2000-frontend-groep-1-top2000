@@ -3,76 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\IMPLEMENTATIE_INSTRUCTIES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMPLEMENTATIE_INSTRUCTIES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\config\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\config\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\StoredProcedures\\sp_GetSongsSamePosition.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\StoredProcedures\\sp_GetSongsSamePosition.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\ZelfdePositiePage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\ZelfdePositiePage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\StoredProcedures\\sp_GetDroppedSongs.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\StoredProcedures\\sp_GetDroppedSongs.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\DroppedSongs.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\DroppedSongs.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Statistics.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Statistics.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Statistics.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Statistics.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\StatisticsHome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SongDetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\SongDetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\StatisticsHome.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SongDetail.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\SongDetail.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\VerdwenenNummers.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\VerdwenenNummers.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\config\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\config\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\StatisticsHome.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -81,58 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Models\\DTOs\\SamePositionSongDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\Models\\DTOs\\SamePositionSongDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Models\\DTOs\\DroppedSongDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\Models\\DTOs\\DroppedSongDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Repositories\\StatisticsRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\Repositories\\StatisticsRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Repositories\\Interfaces\\IStatisticsRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\Repositories\\Interfaces\\IStatisticsRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Controllers\\StatisticsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\Controllers\\StatisticsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\SETUP_INSTRUCTIONS.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\SETUP_INSTRUCTIONS.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SamePositionSongs.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\SamePositionSongs.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend-files\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\FRONTEND_TEST_INSTRUCTIES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FRONTEND_TEST_INSTRUCTIES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\IMPLEMENTATIE_SAMENVATTING.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMPLEMENTATIE_SAMENVATTING.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\PROJECT_STRUCTUUR.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PROJECT_STRUCTUUR.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\QUICK_REFERENCE.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QUICK_REFERENCE.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\BACKEND_FIX_CHECKLIST.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BACKEND_FIX_CHECKLIST.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -142,400 +38,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZelfdePositiePage.jsx",
+              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\ZelfdePositiePage.jsx",
+              "RelativeDocumentMoniker": "src\\components\\ZelfdePositiePage.jsx",
+              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\ZelfdePositiePage.jsx",
+              "RelativeToolTip": "src\\components\\ZelfdePositiePage.jsx",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwAMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-23T11:24:15.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "api.js",
+              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\config\\api.js",
+              "RelativeDocumentMoniker": "src\\config\\api.js",
+              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\config\\api.js",
+              "RelativeToolTip": "src\\config\\api.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-21T08:29:43.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VerdwenenNummers.jsx",
+              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\VerdwenenNummers.jsx",
+              "RelativeDocumentMoniker": "src\\components\\VerdwenenNummers.jsx",
+              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\VerdwenenNummers.jsx",
+              "RelativeToolTip": "src\\components\\VerdwenenNummers.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-23T11:20:53.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.jsx",
+              "RelativeDocumentMoniker": "src\\App.jsx",
+              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.jsx",
+              "RelativeToolTip": "src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-21T08:27:56.011Z"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "BACKEND_FIX_CHECKLIST.md",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\BACKEND_FIX_CHECKLIST.md",
-              "RelativeDocumentMoniker": "BACKEND_FIX_CHECKLIST.md",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\BACKEND_FIX_CHECKLIST.md",
-              "RelativeToolTip": "BACKEND_FIX_CHECKLIST.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-22T13:15:24.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IMPLEMENTATIE_INSTRUCTIES.md",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\IMPLEMENTATIE_INSTRUCTIES.md",
-              "RelativeDocumentMoniker": "IMPLEMENTATIE_INSTRUCTIES.md",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\IMPLEMENTATIE_INSTRUCTIES.md",
-              "RelativeToolTip": "IMPLEMENTATIE_INSTRUCTIES.md",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-22T11:01:17.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "sp_GetDroppedSongs.sql",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\StoredProcedures\\sp_GetDroppedSongs.sql",
-              "RelativeDocumentMoniker": "backend-files\\StoredProcedures\\sp_GetDroppedSongs.sql",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\StoredProcedures\\sp_GetDroppedSongs.sql",
-              "RelativeToolTip": "backend-files\\StoredProcedures\\sp_GetDroppedSongs.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-01-22T10:55:57.153Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\README.md",
-              "RelativeDocumentMoniker": "backend-files\\README.md",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\README.md",
-              "RelativeToolTip": "backend-files\\README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-22T11:01:41.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "sp_GetSongsSamePosition.sql",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\StoredProcedures\\sp_GetSongsSamePosition.sql",
-              "RelativeDocumentMoniker": "backend-files\\StoredProcedures\\sp_GetSongsSamePosition.sql",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\StoredProcedures\\sp_GetSongsSamePosition.sql",
-              "RelativeToolTip": "backend-files\\StoredProcedures\\sp_GetSongsSamePosition.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-01-22T10:55:57.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "QUICK_REFERENCE.txt",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\QUICK_REFERENCE.txt",
-              "RelativeDocumentMoniker": "QUICK_REFERENCE.txt",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\QUICK_REFERENCE.txt",
-              "RelativeToolTip": "QUICK_REFERENCE.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-22T11:04:54.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "PROJECT_STRUCTUUR.txt",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\PROJECT_STRUCTUUR.txt",
-              "RelativeDocumentMoniker": "PROJECT_STRUCTUUR.txt",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\PROJECT_STRUCTUUR.txt",
-              "RelativeToolTip": "PROJECT_STRUCTUUR.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-22T11:04:10.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IMPLEMENTATIE_SAMENVATTING.md",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\IMPLEMENTATIE_SAMENVATTING.md",
-              "RelativeDocumentMoniker": "IMPLEMENTATIE_SAMENVATTING.md",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\IMPLEMENTATIE_SAMENVATTING.md",
-              "RelativeToolTip": "IMPLEMENTATIE_SAMENVATTING.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-22T11:03:30.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "FRONTEND_TEST_INSTRUCTIES.md",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\FRONTEND_TEST_INSTRUCTIES.md",
-              "RelativeDocumentMoniker": "FRONTEND_TEST_INSTRUCTIES.md",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\FRONTEND_TEST_INSTRUCTIES.md",
-              "RelativeToolTip": "FRONTEND_TEST_INSTRUCTIES.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-22T11:02:32.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DroppedSongs.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\DroppedSongs.jsx",
-              "RelativeDocumentMoniker": "src\\components\\DroppedSongs.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\DroppedSongs.jsx",
-              "RelativeToolTip": "src\\components\\DroppedSongs.jsx",
-              "ViewState": "AgIAABAAAAAAAAAAAAAhwAYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T08:51:42.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "SamePositionSongs.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SamePositionSongs.jsx",
-              "RelativeDocumentMoniker": "src\\components\\SamePositionSongs.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SamePositionSongs.jsx",
-              "RelativeToolTip": "src\\components\\SamePositionSongs.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-22T10:57:59.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SETUP_INSTRUCTIONS.txt",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\SETUP_INSTRUCTIONS.txt",
-              "RelativeDocumentMoniker": "backend-files\\SETUP_INSTRUCTIONS.txt",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\SETUP_INSTRUCTIONS.txt",
-              "RelativeToolTip": "backend-files\\SETUP_INSTRUCTIONS.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-22T10:57:36.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "StatisticsController.cs",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Controllers\\StatisticsController.cs",
-              "RelativeDocumentMoniker": "backend-files\\Controllers\\StatisticsController.cs",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Controllers\\StatisticsController.cs",
-              "RelativeToolTip": "backend-files\\Controllers\\StatisticsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T10:57:18.848Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IStatisticsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Repositories\\Interfaces\\IStatisticsRepository.cs",
-              "RelativeDocumentMoniker": "backend-files\\Repositories\\Interfaces\\IStatisticsRepository.cs",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Repositories\\Interfaces\\IStatisticsRepository.cs",
-              "RelativeToolTip": "backend-files\\Repositories\\Interfaces\\IStatisticsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T10:56:58.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "StatisticsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Repositories\\StatisticsRepository.cs",
-              "RelativeDocumentMoniker": "backend-files\\Repositories\\StatisticsRepository.cs",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Repositories\\StatisticsRepository.cs",
-              "RelativeToolTip": "backend-files\\Repositories\\StatisticsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T10:56:58.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DroppedSongDto.cs",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Models\\DTOs\\DroppedSongDto.cs",
-              "RelativeDocumentMoniker": "backend-files\\Models\\DTOs\\DroppedSongDto.cs",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Models\\DTOs\\DroppedSongDto.cs",
-              "RelativeToolTip": "backend-files\\Models\\DTOs\\DroppedSongDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T10:56:26.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SamePositionSongDto.cs",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Models\\DTOs\\SamePositionSongDto.cs",
-              "RelativeDocumentMoniker": "backend-files\\Models\\DTOs\\SamePositionSongDto.cs",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\backend-files\\Models\\DTOs\\SamePositionSongDto.cs",
-              "RelativeToolTip": "backend-files\\Models\\DTOs\\SamePositionSongDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T10:56:26.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Contact.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Contact.css",
-              "RelativeDocumentMoniker": "src\\components\\Contact.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Contact.css",
-              "RelativeToolTip": "src\\components\\Contact.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T10:11:13.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Navbar.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Navbar.jsx",
-              "RelativeDocumentMoniker": "src\\components\\Navbar.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Navbar.jsx",
-              "RelativeToolTip": "src\\components\\Navbar.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T10:09:44.465Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Statistics.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Statistics.jsx",
-              "RelativeDocumentMoniker": "src\\components\\Statistics.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Statistics.jsx",
-              "RelativeToolTip": "src\\components\\Statistics.jsx",
-              "ViewState": "AgIAABsAAAAAAAAAAIBJwEMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T10:21:11.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Statistics.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Statistics.css",
-              "RelativeDocumentMoniker": "src\\components\\Statistics.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Statistics.css",
-              "RelativeToolTip": "src\\components\\Statistics.css",
-              "ViewState": "AgIAALQAAAAAAAAAAABBwAQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T10:25:08.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Contact.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Contact.jsx",
-              "RelativeDocumentMoniker": "src\\components\\Contact.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Contact.jsx",
-              "RelativeToolTip": "src\\components\\Contact.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T10:11:13.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "index.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\index.css",
-              "RelativeDocumentMoniker": "src\\index.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\index.css",
-              "RelativeToolTip": "src\\index.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T10:27:45.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.css",
-              "RelativeDocumentMoniker": "src\\App.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.css",
-              "RelativeToolTip": "src\\App.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T10:13:06.261Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StatisticsHome.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.css",
-              "RelativeDocumentMoniker": "src\\components\\StatisticsHome.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.css",
-              "RelativeToolTip": "src\\components\\StatisticsHome.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T08:51:21.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Navbar.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Navbar.css",
-              "RelativeDocumentMoniker": "src\\components\\Navbar.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\Navbar.css",
-              "RelativeToolTip": "src\\components\\Navbar.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T10:09:44.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SongDetail.css",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SongDetail.css",
-              "RelativeDocumentMoniker": "src\\components\\SongDetail.css",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SongDetail.css",
-              "RelativeToolTip": "src\\components\\SongDetail.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-21T10:26:54.588Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "StatisticsHome.jsx",
               "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.jsx",
               "RelativeDocumentMoniker": "src\\components\\StatisticsHome.jsx",
               "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\StatisticsHome.jsx",
               "RelativeToolTip": "src\\components\\StatisticsHome.jsx",
-              "ViewState": "AgIAACcAAAAAAAAAAABBwAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T08:51:21.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SongDetail.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SongDetail.jsx",
-              "RelativeDocumentMoniker": "src\\components\\SongDetail.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\components\\SongDetail.jsx",
-              "RelativeToolTip": "src\\components\\SongDetail.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T10:21:14.354Z"
+              "WhenOpened": "2026-01-23T11:23:34.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "App.jsx",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.jsx",
-              "RelativeDocumentMoniker": "src\\App.jsx",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\App.jsx",
-              "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AgIAAGYBAAAAAAAAAABBwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-01-21T08:27:56.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "api.js",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\config\\api.js",
-              "RelativeDocumentMoniker": "src\\config\\api.js",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\config\\api.js",
-              "RelativeToolTip": "src\\config\\api.js",
-              "ViewState": "AgIAACAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-21T08:29:43.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-21T08:27:07.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 5,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\src\\main.jsx",
               "RelativeDocumentMoniker": "src\\main.jsx",
@@ -544,6 +117,18 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-01-21T08:27:29.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\tomva\\Documents\\GitHub\\project-top2000-frontend-groep-1-top2000\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-01-21T08:27:07.266Z"
             }
           ]
         }
