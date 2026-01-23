@@ -38,12 +38,12 @@ function StatisticsHome() {
       available: true
     },
     {
-      id: 'decades',
-      title: 'Per Decennium',
-      description: 'Statistieken per tijdperk',
-      icon: '📅',
-      route: '/statistics/decennia',
-      available: false
+      id: 're-entries',
+      title: 'Opnieuw Binnen',
+      description: 'Nummers die hun rentree maken in de lijst',
+      icon: '♻️',
+      route: '/statistics/opnieuw-binnenkomers',
+      available: true
     },
     {
       id: 'all-time',

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar'; 
-import './NieuweBinnenkomers.css'; // We hergebruiken de werkende styling!
+import './NieuweBinnenkomers.css'; // We hergebruiken de CSS weer
 
-function VerdwenenNummers() {
+function OpnieuwBinnenkomers() {
   const [year, setYear] = useState(2024); 
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -13,8 +13,8 @@ function VerdwenenNummers() {
     setLoading(true);
     setError(null);
     try {
-      // Let op: Ander endpoint
-      const response = await fetch(`https://localhost:7003/api/statistics/verdwenen-nummers/${selectedYear}`);
+      // Nieuwe endpoint
+      const response = await fetch(`https://localhost:7003/api/statistics/opnieuw-binnenkomers/${selectedYear}`);
       
       if (!response.ok) throw new Error('Fout bij ophalen gegevens');
       
@@ -43,8 +43,8 @@ function VerdwenenNummers() {
       <main className="stats-container">
         <div className="stats-header">
           <Link to="/statistics" className="back-link">← Terug naar overzicht</Link>
-          <h1>👋 Verdwenen Nummers</h1>
-          <p>Nummers die in {year} uit de lijst vielen (stonden er in {year - 1} nog wel in).</p>
+          <h1>♻️ Opnieuw Binnen</h1>
+          <p>Nummers die in {year} hun rentree maakten (stonden er in {year - 1} niet in, maar daarvoor wel).</p>
         </div>
 
         <div className="filter-section">
@@ -65,7 +65,7 @@ function VerdwenenNummers() {
             <table className="stats-table">
               <thead>
                 <tr>
-                  <th className="col-pos">Positie ({year - 1})</th> {/* Let op de header tekst */}
+                  <th className="col-pos">Positie</th>
                   <th className="col-title">Titel</th>
                   <th className="col-artist">Artiest</th>
                   <th className="col-year">Uitgiftejaar</th>
@@ -75,9 +75,9 @@ function VerdwenenNummers() {
                 {entries && entries.length > 0 ? (
                   entries.map((entry, index) => (
                     <tr key={index}>
+                      {/* Simpele weergave zonder badge */}
                       <td style={{ textAlign: 'center', width: '80px', fontWeight: 'bold', color: 'white' }}>
-                         {/* Let op: Backend stuurt 'positieVorigJaar' (camelCase) */}
-                         {entry.positieVorigJaar}
+                         {entry.positie}
                       </td>
                       <td className="title-cell">{entry.titel}</td>
                       <td>{entry.artiestNaam}</td>
@@ -86,7 +86,7 @@ function VerdwenenNummers() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="4" className="no-data">Geen verdwenen nummers gevonden voor {year}.</td>
+                    <td colSpan="4" className="no-data">Geen re-entries gevonden voor {year}.</td>
                   </tr>
                 )}
               </tbody>
@@ -98,4 +98,4 @@ function VerdwenenNummers() {
   );
 }
 
-export default VerdwenenNummers;
+export default OpnieuwBinnenkomers;
