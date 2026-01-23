@@ -32,10 +32,10 @@ export const API_ENDPOINTS = {
         lostSongs: (year) => `${API_BASE_URL}/statistics/verdwenen-nummers/${year}`,
         // Opnieuw Binnenkomers (Re-entries)
         reEntries: (year) => `${API_BASE_URL}/statistics/opnieuw-binnenkomers/${year}`,
-        // De volledige lijst van een jaar
-        fullList: (year) => `${API_BASE_URL}/statistics/full-list/${year}`,
         // Zelfde Positie
-        samePosition: (year) => `${API_BASE_URL}/statistics/zelfde-positie/${year}`
+        samePosition: (year) => `${API_BASE_URL}/statistics/zelfde-positie/${year}`,
+        // De volledige lijst van een jaar
+        fullList: (year) => `${API_BASE_URL}/statistics/full-list/${year}`
     },
     auth: {
         login: `${API_BASE_URL}/auth/login`,
