@@ -1,21 +1,32 @@
-/* Navbar Styles */
+/* ==============================
+   1. Basis Styles & Desktop
+   ============================== */
+
+/* Zorgt ervoor dat padding de breedte niet beïnvloedt */
+* {
+    box-sizing: border-box; 
+}
+
 .header {
     background-color: #000000;
-    padding: 15px 40px;
+    height: 80px; /* Vaste hoogte */
+    padding: 0 40px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Zet elementen zo ver mogelijk uit elkaar */
+    align-items: center; /* Verticaal centreren */
     border-bottom: 2px solid #ff0000;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Logo Styles */
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: transform 0.3s ease;
+    z-index: 1001;
 }
 
 .logo-link:hover {
@@ -27,6 +38,7 @@
     width: auto;
 }
 
+/* Navigatie Menu (Desktop) */
 .nav {
     display: flex;
     gap: 30px;
@@ -53,41 +65,104 @@
     border-bottom: 2px solid #ff0000;
 }
 
-/* Responsive Design */
+/* ==============================
+   2. Hamburger Menu (Standaard verborgen)
+   ============================== */
+.hamburger {
+    display: none; /* Niet tonen op desktop */
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* ==============================
+   3. Mobile / Tablet Responsive Design
+   ============================== */
+
 @media (max-width: 768px) {
     .header {
-        padding: 12px 20px;
+        padding: 0 20px;
+        height: 70px;
+        flex-direction: row; /* Zorgt dat hamburger en logo op 1 lijn blijven */
+        justify-content: space-between;
     }
 
     .npo-logo {
         height: 32px;
     }
 
+    /* --- Hamburger Instellingen --- */
+    .hamburger {
+        display: block;
+        order: -1; /* Hamburger links, Logo rechts */
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #ff0000;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #ff0000;
+    }
+
+    /* --- Uitklapmenu Styles --- */
     .nav {
-        gap: 15px;
-    }
-
-    .nav-link {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        
+        display: flex; /* Belangrijk voor flex-direction */
         flex-direction: column;
-        gap: 15px;
-        padding: 15px;
+        background-color: #000000;
+        width: 100%;
+        height: calc(100vh - 70px);
+        
+        /* AANPASSING: Alles naar links */
+        text-align: left; 
+        padding-top: 20px;
+        padding-left: 20px; /* Zorgt dat tekst niet tegen de rand plakt */
+        padding-right: 20px;
+        
+        transition: 0.3s ease-in-out;
+        border-top: 1px solid #333;
+        gap: 0;
     }
 
-    .nav {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .nav.active {
+        left: 0;
     }
 
     .nav-link {
-        padding: 6px 10px;
-        font-size: 13px;
+        margin: 0; /* Marges weggehaald voor strakkere lijst */
+        padding: 15px 0; /* Ruimte boven en onder de tekst */
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #333; /* Dun lijntje tussen items */
+    }
+
+    .nav-link:hover {
+        background-color: transparent;
+        color: #ff0000;
+        padding-left: 10px; /* Leuk effect: schuift iets op bij hover */
+    }
+    
+    .nav-link.active {
+        border-bottom: 1px solid #ff0000;
+        color: #ff0000;
     }
 }
